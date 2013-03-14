@@ -36,7 +36,9 @@ public class Potion {
         }
     }
 
-    /** @deprecated In favour of {@link #Potion(PotionType, int)} */
+    /**
+     * @deprecated In favour of {@link #Potion(PotionType, int)}
+     */
     @SuppressWarnings("javadoc")
     @Deprecated
     public Potion(PotionType type, Tier tier) {
@@ -44,14 +46,18 @@ public class Potion {
         Validate.notNull(type, "Type cannot be null");
     }
 
-    /** @deprecated In favour of {@link #Potion(PotionType, int, boolean)} */
+    /**
+     * @deprecated In favour of {@link #Potion(PotionType, int, boolean)}
+     */
     @SuppressWarnings("javadoc")
     @Deprecated
     public Potion(PotionType type, Tier tier, boolean splash) {
         this(type, tier == Tier.TWO ? 2 : 1, splash);
     }
 
-    /** @deprecated In favour of {@link #Potion(PotionType, int, boolean, boolean)} */
+    /**
+     * @deprecated In favour of {@link #Potion(PotionType, int, boolean, boolean)}
+     */
     @SuppressWarnings("javadoc")
     @Deprecated
     public Potion(PotionType type, Tier tier, boolean splash, boolean extended) {
@@ -328,7 +334,9 @@ public class Potion {
         return new ItemStack(Material.POTION, amount, toDamageValue());
     }
 
-    /** @deprecated in favor of integers **/
+    /**
+     * @deprecated in favor of methods using integers
+     */
     @Deprecated
     public enum Tier {
         ONE(0),
