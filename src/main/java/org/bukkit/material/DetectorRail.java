@@ -26,10 +26,21 @@ public class DetectorRail extends ExtendedRails implements PressureSensor {
         super(type, data);
     }
 
+    /**
+     * Gets the current state of this Detector Rail, indicating if it's powered or
+     * unpowered
+     * 
+     * @return true if powered, otherwise false
+     */
     public boolean isPressed() {
         return (getData() & 0x8) == 0x8;
     }
 
+    /**
+     * Sets the current state of this detector rail
+     * 
+     * @param isPressed whether or not the detector rail is powered
+     */
     public void setPressed(boolean isPressed) {
         setData((byte) (isPressed ? (getData() | 0x8) : (getData() & ~0x8)));
     }
