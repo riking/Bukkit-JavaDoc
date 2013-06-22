@@ -3,7 +3,9 @@ package org.bukkit.event.player;
 import org.bukkit.entity.Player;
 
 /**
- * This is called immediately after a player registers for a plugin channel.
+ * This event is called when a player registers a Plugin Channel.
+ *
+ * @see org.bukkit.plugin.messaging.Messenger
  */
 public class PlayerRegisterChannelEvent extends PlayerChannelEvent {
 
