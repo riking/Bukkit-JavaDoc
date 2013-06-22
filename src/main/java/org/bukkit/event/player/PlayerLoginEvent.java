@@ -6,7 +6,21 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.HandlerList;
 
 /**
- * Stores details for players attempting to log in
+ * This event is called when a player is logging in.
+ * <p>
+ * This event is the second in the login process lifecycle. It is preceded by
+ * {@link AsyncPlayerPreLoginEvent} and followed by {@link PlayerJoinEvent}.
+ * At this point, the player's username has already been verified with Mojang
+ * (if the server is not in offline/insecure mode) and the server's whitelist
+ * and bans have been processed, but the player's position and world are not
+ * known.
+ * <p>
+ * If you wish to block the login of a player to the server, it is necessary
+ * to handle this event (or AsyncPlayerPreLoginEvent). PlayerJoinEvent does
+ * not permit plugins to halt the login process.
+ *
+ * @see AsyncPlayerPreLoginEvent
+ * @see PlayerJoinEvent
  */
 public class PlayerLoginEvent extends PlayerEvent {
     private static final HandlerList handlers = new HandlerList();

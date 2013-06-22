@@ -7,8 +7,20 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
 /**
- * Stores details for players attempting to log in
- * @deprecated This event causes synchronization from the login thread; {@link AsyncPlayerPreLoginEvent} is preferred to keep the secondary threads asynchronous.
+ * This event is called when a player attempts to log in.
+ * <p>
+ * Please avoid the use of this event, as it causes unnecessary
+ * synchronization with the main thread. If you require the use of Bukkit API
+ * in deciding whether or not to allow a player to log in, please use
+ * {@link PlayerLoginEvent} instead, which is synchronized.
+ *
+ * @deprecated This event causes synchronization from the login thread;
+ *             {@link AsyncPlayerPreLoginEvent} is preferred to keep the
+ *             secondary threads asynchronous.
+ *
+ * @see AsyncPlayerPreLoginEvent
+ * @see PlayerLoginEvent
+ * @see PlayerJoinEvent
  */
 @Deprecated
 @Warning(reason = "This event causes a login thread to synchronize with the main thread")

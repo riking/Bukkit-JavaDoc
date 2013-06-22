@@ -6,8 +6,20 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
 /**
- * Stores details for players attempting to log in.<br>
- * This event is asynchronous, and not run using main thread.
+ * This event is called when a player attempts to log in.
+ * <p>
+ * <b>Asynchronous event handlers should never access any API in Bukkit. Great
+ * care should be taken to assure the thread-safety of asynchronous event
+ * handlers.</b>
+ * <p>
+ * This event is the first in the login process lifecycle. It is followed by
+ * {@link PlayerLoginEvent} and then {@link PlayerJoinEvent}. At this point,
+ * the player's username has already been verified with Mojang (if the server
+ * is not in offline/insecure mode), but the server's whitelist and bans have
+ * not been processed, and the player's position and world are not known.
+ *
+ * @see PlayerLoginEvent
+ * @see PlayerJoinEvent
  */
 public class AsyncPlayerPreLoginEvent extends Event {
     private static final HandlerList handlers = new HandlerList();
