@@ -11,7 +11,7 @@ import org.bukkit.event.HandlerList;
  * @deprecated This event causes synchronization from the login thread; {@link AsyncPlayerPreLoginEvent} is preferred to keep the secondary threads asynchronous.
  */
 @Deprecated
-@Warning(reason="This event causes a login thread to synchronize with the main thread")
+@Warning(reason = "This event causes a login thread to synchronize with the main thread")
 public class PlayerPreLoginEvent extends Event {
     private static final HandlerList handlers = new HandlerList();
     private Result result;
@@ -45,7 +45,8 @@ public class PlayerPreLoginEvent extends Event {
     }
 
     /**
-     * Gets the current kick message that will be used if getResult() != Result.ALLOWED
+     * Gets the current kick message that will be used if getResult() !=
+     * Result.ALLOWED
      *
      * @return Current kick message
      */
@@ -126,7 +127,8 @@ public class PlayerPreLoginEvent extends Event {
          */
         KICK_BANNED,
         /**
-         * The player is not allowed to log in, due to them not being on the white list
+         * The player is not allowed to log in, due to them not being on the
+         * white list
          */
         KICK_WHITELIST,
         /**

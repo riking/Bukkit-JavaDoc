@@ -37,7 +37,8 @@ public class AsyncPlayerPreLoginEvent extends Event {
      * Gets the current result of the login, as an enum
      *
      * @return Current Result of the login
-     * @deprecated This method uses a deprecated enum from {@link PlayerPreLoginEvent}
+     * @deprecated This method uses a deprecated enum from
+     *             {@link PlayerPreLoginEvent}
      * @see #getLoginResult()
      */
     @Deprecated
@@ -58,7 +59,8 @@ public class AsyncPlayerPreLoginEvent extends Event {
      * Sets the new result of the login, as an enum
      *
      * @param result New result to set
-     * @deprecated This method uses a deprecated enum from {@link PlayerPreLoginEvent}
+     * @deprecated This method uses a deprecated enum from
+     *             {@link PlayerPreLoginEvent}
      * @see #setLoginResult(Result)
      */
     @Deprecated
@@ -67,7 +69,8 @@ public class AsyncPlayerPreLoginEvent extends Event {
     }
 
     /**
-     * Gets the current kick message that will be used if getResult() != Result.ALLOWED
+     * Gets the current kick message that will be used if getResult() !=
+     * Result.ALLOWED
      *
      * @return Current kick message
      */
@@ -108,7 +111,8 @@ public class AsyncPlayerPreLoginEvent extends Event {
      *
      * @param result New result for disallowing the player
      * @param message Kick message to display to the user
-     * @deprecated This method uses a deprecated enum from {@link PlayerPreLoginEvent}
+     * @deprecated This method uses a deprecated enum from
+     *             {@link PlayerPreLoginEvent}
      * @see #disallow(Result, String)
      */
     @Deprecated
@@ -162,7 +166,8 @@ public class AsyncPlayerPreLoginEvent extends Event {
          */
         KICK_BANNED,
         /**
-         * The player is not allowed to log in, due to them not being on the white list
+         * The player is not allowed to log in, due to them not being on the
+         * white list
          */
         KICK_WHITELIST,
         /**
